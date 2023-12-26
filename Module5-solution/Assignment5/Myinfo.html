@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MySign Up</title>
+</head>
+<body>
+<div ng-if="myInfoCtrl.user">
+    <h2>My Info</h2>
+    <div>
+        <p><strong>First Name:</strong> {{ myInfoCtrl.user.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ myInfoCtrl.user.lastName }}</p>
+        <p><strong> Email: </strong> {{ myInfoCtrl.user.email() }}</p>
+        <!-- Add more fields as needed -->
+    </div>
+
+    <div ng-if="myInfoCtrl.user.favoriteMenuItem">
+        <h3>Favorite Menu Item</h3>
+        <div>
+
+            <p><strong>Name:</strong> {{ myInfoCtrl.user.favoriteMenuItem.name }}</p>
+            <p><strong>Description:</strong> {{ myInfoCtrl.user.favoriteMenuItem.description }}</p>
+            <!-- Add more details about the favorite menu item as needed -->
+        </div>
+    </div>
+</div>
+
+<div ng-if="!myInfoCtrl.user">
+    <p>{{ myInfoCtrl.message }} <a ng-href="#/signUp">{{ myInfoCtrl.signUpLink }}</a></p>
+</div>
+
+
+</body>
+</html>

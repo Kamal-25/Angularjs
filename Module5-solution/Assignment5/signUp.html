@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+<form >
+
+
+    <!-- Include form fields for first name, last name, email, phone number, and menu number -->
+    <label for="firstName">First Name:</label><br>
+    <input type="text" id="firstName" ng-model="signUpCtrl.firstName" required><br>
+
+    <label for="lastName">Last Name:</label><br>
+    <input type="text" id="lastName" ng-model="signUpCtrl.lastName" required><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" ng-model="signUpCtrl.email" required><br>
+
+    <label for="phoneNumber">Phone Number:</label><br>
+    <input type="tel" id="phoneNumber" ng-model="signUpCtrl.phoneNumber" required><br>
+
+    <label for="menuNumber">Favorite Menu Number:</label><br>
+    <input type="text" id="menuNumber" ng-model="signUpCtrl.menuNumber" required><br>
+
+
+
+    <!-- Submit button -->
+    <button type="submit">Submit</button><br>
+
+
+
+</form>
+
+</body>
+</html>
